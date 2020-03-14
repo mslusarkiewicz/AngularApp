@@ -29,7 +29,9 @@ app.controller("dataController", function ($scope) {
         var total = 0;
         for(var i = 0; i < $scope.collection2.length; i++){
             var sum = $scope.collection2[i];
-            total += sum.netValue;
+            if(angular.isNumber(sum.netValue)) {
+                total += sum.netValue;
+            }
         }
         return total;
     };
@@ -38,7 +40,9 @@ app.controller("dataController", function ($scope) {
         var total = 0;
         for(var i = 0; i < $scope.collection2.length; i++){
             var sum = $scope.collection2[i];
-            total += sum.vatValue;
+            if(angular.isNumber(sum.vatValue)) {
+                total += sum.vatValue;
+            }
         }
         return total;
     };
@@ -47,7 +51,9 @@ app.controller("dataController", function ($scope) {
         var total = 0;
         for(var i = 0; i < $scope.collection2.length; i++){
             var sum = $scope.collection2[i];
-            total += sum.grossValue;
+            if(angular.isNumber(sum.grossValue)) {
+                total += sum.grossValue;
+            }
         }
         return total;
     };
