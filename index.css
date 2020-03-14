@@ -1,0 +1,24 @@
+#table {
+    font-family: "Trebuchet MS", TimeNewroman, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 500px;
+}
+
+#table td {
+    border: 1px solid #ddd;
+    padding: 1px;
+}
+
+#table th {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: left;
+
+}
+
+#header{
+    width: 500px;
+    padding-bottom: 1px;
+    border-collapse: collapse;
+    border-bottom: 22px solid blue;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="tableApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="index.js"></script>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body ng-controller="dataController">
+
+    <table id="table">
+        <tr>
+        <td id="header">
+
+            WARTOŚĆ
+
+        </td>
+        </tr>
+        <tr ng-repeat="values in collection1">
+            <th>{{values.index}}</th>
+            <th><button ng-click= "addRow()">+</button></th>
+            <th>{{values.netValue}}</th>
+            <th>{{values.vatRate}}</th>
+            <th>{{values.vatValue}} </th>
+            <th>{{values.grossValue}}</th>
+        </tr>
+        <tr ng-repeat="values in collection2">
+            <td>{{$index+1}}.</td>
+            <td><button ng-click= "removeRow($index)">-</button></td>
+            <td><input type="number" ng-model="values.netValue" ng-blur="values.netValue ? values.netValue : values.netValue = 0" ng-click="values.netValue==0 ? values.netValue='' : values.netValue"></td>
+            <td><select><option>23</option><option>7</option><option>0</option></select></td>
+            <td><input type="number" ng-model="values.vatValue" ng-blur="values.vatValue ? values.vatValue : values.vatValue = 0" ng-click="values.vatValue==0 ? values.vatValue='' : values.vatValue"></td>
+            <td><input type="number" ng-model="values.grossValue" ng-blur="values.grossValue ? values.grossValue : values.grossValue = 0" ng-click="values.grossValue==0 ? values.grossValue='' : values.grossValue"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>{{ getTotalNetValue() }} </td>
+            <td></td>
+            <td>{{ getTotalVatValue() }}</td>
+            <td>{{ getTotalGrossValue() }}</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
