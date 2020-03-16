@@ -9,40 +9,38 @@
 </head>
 <body ng-controller="dataController">
 
-    <table id="table">
+    <table class="table">
+
         <tr>
-        <td id="header">
-
-            WARTOŚĆ
-
-        </td>
+            <div class="header">WARTOŚĆ</div>
         </tr>
-        <tr ng-repeat="values in collection1">
-            <th>{{values.index}}</th>
-            <th><button ng-click= "addRow()">+</button></th>
-            <th>{{values.netValue}}</th>
-            <th>{{values.vatRate}}</th>
-            <th>{{values.vatValue}} </th>
-            <th>{{values.grossValue}}</th>
+
+        <tr class="firstrow">
+            <th>#</th>
+            <th><button class="button1" ng-click= addRow()>+</button></th>
+            <th>Wartość netto</th>
+            <th>Stawka VAT</th>
+            <th>Wartość VAT</th>
+            <th>Wartość brutto</th>
         </tr>
-        <tr ng-repeat="values in collection2">
+
+        <tr class="content" ng-repeat="values in collection">
             <td>{{$index+1}}.</td>
-            <td><button ng-click= "removeRow($index)">-</button></td>
+            <td><button class="button2" ng-click= "removeRow($index)">-</button></td>
             <td><input type="number" ng-model="values.netValue" ng-blur="values.netValue ? values.netValue : values.netValue = 0" ng-click="values.netValue==0 ? values.netValue='' : values.netValue"></td>
-            <td><select><option>23</option><option>7</option><option>0</option></select></td>
+            <td class="select"><select><option>23</option><option>7</option><option>0</option></select></td>
             <td><input type="number" ng-model="values.vatValue" ng-blur="values.vatValue ? values.vatValue : values.vatValue = 0" ng-click="values.vatValue==0 ? values.vatValue='' : values.vatValue"></td>
             <td><input type="number" ng-model="values.grossValue" ng-blur="values.grossValue ? values.grossValue : values.grossValue = 0" ng-click="values.grossValue==0 ? values.grossValue='' : values.grossValue"></td>
         </tr>
-        <tr>
+
+        <tr class="lastrow">
             <td></td>
             <td></td>
-            <td>{{ getTotalNetValue() }} </td>
+            <td>{{ getTotalNetValue() }} PLN </td>
             <td></td>
-            <td>{{ getTotalVatValue() }}</td>
-            <td>{{ getTotalGrossValue() }}</td>
+            <td>{{ getTotalVatValue() }} PLN</td>
+            <td>{{ getTotalGrossValue() }} PLN</td>
         </tr>
     </table>
-
-
 </body>
 </html>

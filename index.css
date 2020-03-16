@@ -1,24 +1,115 @@
-#table {
-    font-family: "Trebuchet MS", TimeNewroman, Helvetica, sans-serif;
+
+.table{
     border-collapse: collapse;
-    width: 500px;
+    width: 800px;
+    font-family: "Arial", Helvetica, sans-serif ;
 }
 
-#table td {
-    border: 1px solid #ddd;
-    padding: 1px;
+.header{
+    width: 800px;
+    color: #104160;
+    border-bottom: 2px solid #104160;
+    border-collapse: collapse;
+    font-weight: bold;
+    font-size: larger;
 }
 
-#table th {
-    padding-top: 1px;
-    padding-bottom: 1px;
+.firstrow {
+    color: #C4C9D7;
+    font-size: smaller;
     text-align: left;
-
 }
 
-#header{
-    width: 500px;
-    padding-bottom: 1px;
-    border-collapse: collapse;
-    border-bottom: 22px solid blue;
+tr{
+    border-bottom: 2px solid #EEEEEE;
+}
+
+
+td:nth-child(1) {
+    width: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td:nth-child(2) {
+    width: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+td:nth-child(3) {
+    width: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td:nth-child(4) {
+    width: 140px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td:nth-child(5) {
+    width: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td:nth-child(6) {
+    width: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+tr.firstrow th{
+    border-bottom: 2px solid #E7AD1E;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+
+tr.lastrow td{
+    border-top: 2px solid #E7AD1E;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+input[type=number] {
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 4px;
+}
+
+td.select select{
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 4px;
+}
+
+
+.button1{
+    font-family:  "Arial Black", Gadget, sans-serif;
+    background: #104160;
+    border:none;
+    border-radius: 3px;
+    color: white;
+    font-size: large;
+    line-height: 15px;
+    padding: 1px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button2{
+    font-family:  "Arial Black", Gadget, sans-serif;
+    background: #D74931;
+    border:none;
+    border-radius: 3px;
+    color: white;
+    font-size: x-large;
+    line-height: 10px;
+    padding: 3px;
+    text-decoration: none;
+    display: inline-block;
 }
